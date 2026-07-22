@@ -1,0 +1,52 @@
+.create__character {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 600px;
+  height: 500px;
+  border: 2px solid $grey-bg;
+  border-radius: 10px;
+}
+
+.create__character-title {
+  font-size: 32px;
+}
+
+.create__character-input {
+  display: flex;
+  border: 2px solid $accent-bg;
+  border-radius: 10px;
+  padding: 15px;
+  width: 350px;
+}
+
+.create__character-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  padding: 10px; 
+  border: 2px solid $accent-bg;
+  border-radius: 10px;
+  width: 200px;
+}
+
+
+@media (hover: hover) {
+  .create__character-btn:hover {
+    cursor: pointer;
+    background-color: $subtitle-color;
+    color: $btn-color;
+    transition: all 0.3s ease-in;
+  }
+  .create__character-btn:not(hover) {
+    background-color: none;
+    transition: all 0.3s ease-in;
+  }
+}
