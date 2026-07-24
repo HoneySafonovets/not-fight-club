@@ -6,7 +6,7 @@ export default function selectionCharacter() {
       <div class="create__character-field">
         <input class="create__character-input" type="text" placeholder="Give a name">
       </div>
-      <button class="create__character-btn" id="start__btn">Next step</button>
+      <button class="create__character-btn create__character-btn-none" id="start__btn">Next step</button>
     </div>
     `
   // });

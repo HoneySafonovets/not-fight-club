@@ -21,6 +21,18 @@ html {
   box-sizing: border-box;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
