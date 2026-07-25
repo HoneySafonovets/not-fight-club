@@ -1,12 +1,15 @@
 .header {
   display: flex;
   justify-content: flex-start;
+  width: 100%;
 }
 
 .header__name {
   font-size: 24px;
+  font-family: $font-base;
+  font-weight: 700;
 
   span {
-    font-size: 32px;
+    font-size: 28px;
   }
 }

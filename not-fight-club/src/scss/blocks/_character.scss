@@ -3,15 +3,21 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
+  font-family: $font-base;
+  font-weight: 700;
 }
 
 .character__name {
-  font-size: 32px; 
+  font-size: 32px;
+  font-family: $font-base;
+  font-weight: 700;
 }
 
 .character__class {
   display: flex;
   font-size: 32px;
+  font-family: $font-base;
+  font-weight: 700;
 }
 
 .character__hero-card {
@@ -36,8 +42,32 @@
 .character__hero-name {
   font-size: 24px;
   color: $base-color;
+  font-family: $font-base;
+  font-weight: 700;
 }
 
+.character__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+}
+
+.character__health-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $hp-bar-color;
+  border-radius: 10px;
+  width: 300px;
+  height: 10px;
+  bottom: 50px;
+  right: 0px;
+}
 
 @media (hover: hover) {
   .character__hero-card:hover {

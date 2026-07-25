@@ -1,4 +1,4 @@
-export default function selectionCharacter() {
+export default function choiceName() {
   // document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#app').innerHTML = `
     <div class="create__character">
