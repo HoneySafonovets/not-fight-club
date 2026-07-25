@@ -4,7 +4,7 @@ import hit from './js/hit';
 import choiceName from './js/choiceName';
 import pushName from './js/pushName';
 import startInputCheck from './js/startInputCheck';
-import hamletAudioPlay from './js/hamletAudioPlay';
+import { HamletAudio, Hamlet } from './js/HamletAudio';
 import choiceCharacter from './js/choiceCharacter';
 import startFight from './js/startFight';
 
@@ -16,7 +16,8 @@ document.querySelector('#app').innerHTML = `
 </main>
 `;
 
-// hamletAudioPlay();
+
+Hamlet.play();
 let isStart = 0;
 
 

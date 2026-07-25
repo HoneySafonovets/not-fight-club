@@ -1,3 +1,6 @@
+import { Ruines } from './ruinesAudio';
+import { HamletAudio, Hamlet } from './HamletAudio';
+
 export default function startFight(btn, value, name) {
   btn.addEventListener('click', () => {
     document.querySelector('#app').innerHTML = `
@@ -15,5 +18,8 @@ export default function startFight(btn, value, name) {
         </article >
       </main>
     `;
+
+    Hamlet.stop();
+    Ruines.play();
   });
 }
