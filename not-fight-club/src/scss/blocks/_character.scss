@@ -9,7 +9,44 @@
   font-size: 32px; 
 }
 
-.character__hero {
+.character__class {
+  display: flex;
+  font-size: 32px;
+}
+
+.character__hero-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  width: 310px;
+  max-height: 400px;
+  border: 1px solid ;
+  border-radius: 10px;
+  background-color: $card-hero-back;
+}
+
+.character__hero-img {
   max-width: 210px;
   max-height: 310px;
+}
+
+.character__hero-name {
+  font-size: 24px;
+  color: $base-color;
+}
+
+
+@media (hover: hover) {
+  .character__hero-card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in;
+  }
+  .character__hero-card:not(hover) {
+    transform: scale(1);
+    transition: all 0.3s ease-in;
+  }
 }

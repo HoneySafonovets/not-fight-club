@@ -1,20 +1,20 @@
+import '@fontsource/ubuntu';
 import './scss/main.scss';
 import hit from './js/hit';
 import selectionCharacter from './js/selectionCharacter';
 import pushName from './js/pushName';
 import startInputCheck from './js/startInputCheck';
+import hamletAudioPlay from './js/hamletAudioPlay';
 
 document.querySelector('#app').innerHTML = `
 <header class="header">
   <h1 class="header__title">Not fight club</h1>
 </header>
 <main id="main">
-
-  <img class="hero" src="./assets/crusader.png" alt="Crusader">
 </main>
 `;
 
-
+// hamletAudioPlay();
 let isStart = 0;
 
 if (isStart === 0) {
