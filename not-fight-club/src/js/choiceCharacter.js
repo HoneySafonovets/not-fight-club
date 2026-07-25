@@ -9,8 +9,12 @@ export default function choiceCharacter(value, name) {
     <main class="main main__base" id="main">
       <article class="character__main">
         <img class="character__hero-img" src="./assets/${name}.png" alt="Jester">
-        <div class="character__health-bar">100/100</div>
+        <div class="character__health-bar">10/10</div>
       </article>
+      <div class="main__start-fight">
+        <img class="main__start-arrow" src="./assets/start.png" alt="Arrow">
+        <span>Explore the Darkest Dungeon</span>
+      </div>
     </main>
   `;
 

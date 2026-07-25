@@ -6,6 +6,7 @@ import pushName from './js/pushName';
 import startInputCheck from './js/startInputCheck';
 import hamletAudioPlay from './js/hamletAudioPlay';
 import choiceCharacter from './js/choiceCharacter';
+import startFight from './js/startFight';
 
 document.querySelector('#app').innerHTML = `
 <header class="header">
@@ -22,6 +23,11 @@ let isStart = 0;
 if (localStorage.getItem('fullName') !== null && localStorage.getItem('character') !== null) {
   choiceCharacter(localStorage.getItem('name'), localStorage.getItem('character'));
   // console.log('work')
+  startFight(
+    document.querySelector('.main__start-arrow'),
+    localStorage.getItem('name'),
+    localStorage.getItem('character')
+  );
 } else {
   choiceName();
 
