@@ -12,6 +12,10 @@ export class RuinesAudio {
   stop() {
     this.audio.pause();
   }
+
+  begin() {
+    this.audio.currentTime = 0;
+  }
 }
 
 export const Ruines = new RuinesAudio('./assets/audio/battle_sound.mp3');

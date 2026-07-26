@@ -1,6 +1,7 @@
 
 import choiceCharacter from "./choiceCharacter";
 import { Click } from "./clickSound";
+import { Hamlet } from "./HamletAudio";
 
 export default function pushName(btn) {
   btn.addEventListener('click', (event) => {
@@ -49,6 +50,7 @@ export default function pushName(btn) {
 
         choiceCharacter(value, card.id);
         Click.play();
+        Hamlet.play();
       })
     } else {
       btn.classList.add('create__character-btn-none');

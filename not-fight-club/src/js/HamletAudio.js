@@ -12,6 +12,10 @@ export class HamletAudio {
   stop() {
     this.audio.pause();
   }
+
+  begin() {
+    this.audio.currentTime = 0;
+  }
 }
 
 export const Hamlet = new HamletAudio('./assets/audio/hamlet.mp3');

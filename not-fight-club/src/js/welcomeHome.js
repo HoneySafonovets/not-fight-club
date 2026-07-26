@@ -29,13 +29,13 @@ export default function welcomeHome(value, name) {
     choiceName()
 
     startInputCheck(
-        document.querySelector('.create__character-input'),
-        document.querySelector('.create__character-btn')
-      );
+      document.querySelector('.create__character-input'),
+      document.querySelector('.create__character-btn')
+    );
     
     pushName(document.querySelector('.create__character-btn'));
     Click.play();
-    // Hamlet.play();
+    Hamlet.play();
   });
 
   // Continue button function
@@ -50,7 +50,7 @@ export default function welcomeHome(value, name) {
       );
       Click.play();
       WelcomeSound.play();
-      // Hamlet.play();
+      Hamlet.play();
     }
   });
 }

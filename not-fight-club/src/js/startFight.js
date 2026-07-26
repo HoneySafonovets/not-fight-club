@@ -1,11 +1,13 @@
 import { Ruines } from './ruinesAudio';
 import { HamletAudio, Hamlet } from './HamletAudio';
+import backToHome from './backToHome';
 
 export default function startFight(btn, value, name) {
   btn.addEventListener('click', () => {
     document.querySelector('#app').innerHTML = `
       <header class="header">
         <h1 class="header__name">Name: &nbsp;&nbsp;<span>${name} ${value}<span></h1>
+        <img class="header__fight-home" src="./assets/controls/home.svg" alt="Go home">
       </header>
       <main class="main main__ruins" id="main">
         <article class="character__main">
@@ -25,8 +27,10 @@ export default function startFight(btn, value, name) {
       </footer>
     `;
 
-    // Hamlet.stop();
-    // Ruines.play();
+    document.querySelector('.header__fight-home').addEventListener('click', backToHome);
+    Hamlet.stop();
+    Hamlet.begin();
+    Ruines.play();
     return 2;
   });
 }

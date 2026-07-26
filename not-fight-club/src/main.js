@@ -50,3 +50,6 @@ if (localStorage.getItem('fullName') !== null && localStorage.getItem('character
 
 
 // document.querySelector('.hero').addEventListener('click', hit);
+
+
+console.log('Привет! Если есть возможность - проверь ближе к концу дедлайна!')
