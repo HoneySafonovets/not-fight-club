@@ -24,6 +24,7 @@ export default function welcomeHome(value, name) {
     </main>
   `;
 
+  // Restart button function
   document.querySelector('#restart__btn').addEventListener('click', () => {
     choiceName()
 
@@ -37,6 +38,7 @@ export default function welcomeHome(value, name) {
     // Hamlet.play();
   });
 
+  // Continue button function
   document.querySelector('#continue__btn').addEventListener('click', () => {
     if (value !== null && name !== null) {
       choiceCharacter(value, name);
