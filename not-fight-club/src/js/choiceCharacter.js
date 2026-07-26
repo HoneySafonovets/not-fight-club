@@ -10,11 +10,6 @@ export default function choiceCharacter(value, name) {
   document.querySelector('#app').innerHTML = `
     <header class="header">
       <h1 class="header__name">Name: &nbsp;&nbsp;<span>${name} ${value}<span></h1>
-      <div class="header__nav">
-        <img class="header__nav-img" src="./assets/controls/home.svg" alt="Home">
-        <img class="header__nav-img" src="./assets/controls/profile.svg" alt="Profile">
-        <img class="header__nav-img" src="./assets/controls/settings.png" alt="Settings">
-      </div>
     </header>
     <main class="main main__base" id="main">
       
