@@ -10,13 +10,19 @@ export default function startFight(btn, value, name) {
       <main class="main main__ruins" id="main">
         <article class="character__main">
           <img class="character__hero-img" src="./assets/${name}.png" alt="Jester">
-          <div class="character__health-bar">10/10</div>
+          <progress class="character__health-bar" value="100" max="100">100/100</progress>
+          <div class="main__brigand-bar">100/100</div>
         </article>
         <article class="main__brigand">
           <img class="main__brigand-img" src="./assets/brigand.png" alt="Brigand">
-          <div class="brigand__health-bar">20/20</div>
+          <progress class="brigand__health-bar" value="100" max="100"></progress>
+          <div class="main__brigand-bar">100/100</div>
         </article >
       </main>
+      <footer class="footer">
+
+
+      </footer>
     `;
 
     // Hamlet.stop();
