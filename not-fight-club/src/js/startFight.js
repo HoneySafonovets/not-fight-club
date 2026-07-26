@@ -19,7 +19,7 @@ export default function startFight(btn, value, name) {
       </main>
     `;
 
-    Hamlet.stop();
-    Ruines.play();
+    // Hamlet.stop();
+    // Ruines.play();
   });
 }

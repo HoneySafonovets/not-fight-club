@@ -1,5 +1,6 @@
 
 import choiceCharacter from "./choiceCharacter";
+import { Click } from "./clickSound";
 
 export default function pushName(btn) {
   btn.addEventListener('click', (event) => {
@@ -38,6 +39,7 @@ export default function pushName(btn) {
       `
       localStorage.setItem('fullName', value);
       
+      Click.play();
       document.querySelector('.character__container').addEventListener('click', (event) => {
         const card = event.target.closest('.character__hero-card');
 
@@ -46,6 +48,7 @@ export default function pushName(btn) {
         }
 
         choiceCharacter(value, card.id);
+        Click.play();
       })
     } else {
       btn.classList.add('create__character-btn-none');

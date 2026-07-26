@@ -7,6 +7,8 @@ import startInputCheck from './js/startInputCheck';
 import { HamletAudio, Hamlet } from './js/HamletAudio';
 import choiceCharacter from './js/choiceCharacter';
 import startFight from './js/startFight';
+import { WelcomeSound } from './js/WelcomeSound';
+import welcomeHome from './js/welcomeHome';
 
 document.querySelector('#app').innerHTML = `
 <header class="header">
@@ -17,18 +19,13 @@ document.querySelector('#app').innerHTML = `
 `;
 
 
-Hamlet.play();
+// Hamlet.play();
+// WelcomeSound.play();
 let isStart = 0;
 
 
 if (localStorage.getItem('fullName') !== null && localStorage.getItem('character') !== null) {
-  choiceCharacter(localStorage.getItem('name'), localStorage.getItem('character'));
-  // console.log('work')
-  startFight(
-    document.querySelector('.main__start-arrow'),
-    localStorage.getItem('name'),
-    localStorage.getItem('character')
-  );
+  welcomeHome(localStorage.getItem('name'), localStorage.getItem('character'));
 } else {
   choiceName();
 
@@ -39,6 +36,17 @@ if (localStorage.getItem('fullName') !== null && localStorage.getItem('character
 
   pushName(document.querySelector('.create__character-btn'));
 }
+
+
+// if (localStorage.getItem('fullName') !== null && localStorage.getItem('character') !== null) {
+//   choiceCharacter(localStorage.getItem('name'), localStorage.getItem('character'));
+//   // console.log('work')
+//   startFight(
+//     document.querySelector('.main__start-arrow'),
+//     localStorage.getItem('name'),
+//     localStorage.getItem('character')
+//   );
+// } 
 
 
 // document.querySelector('.hero').addEventListener('click', hit);

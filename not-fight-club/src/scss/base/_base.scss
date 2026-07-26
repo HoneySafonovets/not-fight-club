@@ -12,12 +12,14 @@ body {
 #app {
   position: relative;
   display: flex;
-  // justify-content: center;
+  justify-content: center;
   align-items: center;
   width: 1280px;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
+  color: $base-color;
+  font-family: $font-base;
   // border-inline: 1px solid var(--border);
   height: 100vh;
   display: flex;
@@ -51,7 +53,20 @@ body {
 }
 
 .main__ruins {
-  background: url('../../../public/assets/wallpaper.jpg') no-repeat;
+  position: relative;
+  background: url('../../../public/assets/ruins.jpg') no-repeat;
+  background-size: 100% 70%;
+  width: 100%;
+  height: 100vh;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.main__welcome {
+  margin: 0 auto;
+  display: flex;
+  background: url('../../../public/assets/start-wallpaper') no-repeat;
+  background-size: 100% 70%;
 }
 
 .main__start-fight {
@@ -118,26 +133,6 @@ body {
 
   @media (max-width: 1024px) {
     font-size: 16px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
   }
 }
 
