@@ -21,5 +21,6 @@ export default function startFight(btn, value, name) {
 
     // Hamlet.stop();
     // Ruines.play();
+    return 2;
   });
 }

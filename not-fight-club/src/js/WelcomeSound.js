@@ -1,4 +1,4 @@
-export class WelcomeHome {
+export class audioWelcomeSound {
   constructor(src) {
     this.audio = new Audio(src);
     this.audio.volume = 0.5;
@@ -13,4 +13,4 @@ export class WelcomeHome {
   }
 }
 
-export const WelcomeSound = new WelcomeHome('./assets/audio/welcome.mp3');
+export const WelcomeSound = new audioWelcomeSound('./assets/audio/welcome.mp3');
