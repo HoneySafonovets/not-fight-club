@@ -1,24 +1,24 @@
 (function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function e(){document.querySelector(`#app`).innerHTML=`
-    <div class="create__character">
-      <h2 class="create__character-title">Choose a name for your hero</h2>
-      <div class="create__character-field">
-        <input class="create__character-input" type="text" placeholder="Give a name">
-      </div>
-      <button class="create__character-btn create__character-btn-none" id="start__btn">Next step</button>
+  <div class="create__character">
+    <h2 class="create__character-title">Choose a name for your hero</h2>
+    <div class="create__character-field">
+      <input class="create__character-input" type="text" placeholder="Give a name">
     </div>
-    `}function t(e,t){e.addEventListener(`input`,n=>{e.value===``?t.classList.add(`create__character-btn-none`):t.classList.remove(`create__character-btn-none`)})}function n(){}var r=new class{constructor(e){this.audio=new Audio(e),this.audio.volume=.2,this.audio.loop=!0}play(){this.audio.play()}stop(){this.audio.pause()}begin(){this.audio.currentTime=0}}(`./assets/audio/battle_sound.mp3`),i=new class{constructor(e){this.audio=new Audio(e),this.audio.volume=.2,this.audio.loop=!0}play(){this.audio.play()}stop(){this.audio.pause()}begin(){this.audio.currentTime=0}}(`./assets/audio/hamlet.mp3`);function a(){r.stop(),r.begin(),l(localStorage.getItem(`name`),localStorage.getItem(`character`)),i.play()}function o(e,t,n){e.addEventListener(`click`,()=>(document.querySelector(`#app`).innerHTML=`
+    <button class="create__character-btn create__character-btn-none" id="start__btn">Next step</button>
+  </div>
+  `}function t(e,t){e.addEventListener(`input`,n=>{e.value===``?t.classList.add(`create__character-btn-none`):t.classList.remove(`create__character-btn-none`)})}var n=new class{constructor(e){this.audio=new Audio(e),this.audio.volume=.2,this.audio.loop=!0}play(){this.audio.play()}stop(){this.audio.pause()}begin(){this.audio.currentTime=0}}(`./assets/audio/battle_sound.mp3`),r=new class{constructor(e){this.audio=new Audio(e),this.audio.volume=.2,this.audio.loop=!0}play(){this.audio.play()}stop(){this.audio.pause()}begin(){this.audio.currentTime=0}}(`./assets/audio/hamlet.mp3`),i=new class{constructor(e){this.audio=new Audio(e),this.audio.volume=.5}play(){this.audio.play()}stop(){this.audio.pause()}}(`./assets/audio/btnClick.mp3`);function a(){i.play(),n.stop(),n.begin(),l(localStorage.getItem(`name`),localStorage.getItem(`character`)),r.play()}async function o(e,t,o){let s=await(await fetch(`./assets/json/enemy.json`)).json(),c=``;function l(e,t){return Math.random()<.5?e:t}c=l(1,2)===1?s[0].enemy:s[1].enemy,e.addEventListener(`click`,()=>(document.querySelector(`#app`).innerHTML=`
       <header class="header">
-        <h1 class="header__name">Name: &nbsp;&nbsp;<span>${n} ${t}<span></h1>
+        <h1 class="header__name">Name: &nbsp;&nbsp;<span>${o} ${t}<span></h1>
         <img class="header__fight-home" src="./assets/controls/home.svg" alt="Go home">
       </header>
       <main class="main main__ruins" id="main">
         <article class="character__main">
-          <img class="character__hero-img" src="./assets/${n}.png" alt="Jester">
+          <img class="character__hero-img" src="./assets/${o}.png" alt="${o}">
           <progress class="character__health-bar" value="100" max="100">100/100</progress>
           <div class="main__brigand-bar">100/100</div>
         </article>
         <article class="main__brigand">
-          <img class="main__brigand-img" src="./assets/brigand.png" alt="Brigand">
+          <img class="main__brigand-img" src="./assets/${c}.png" alt="${c}">
           <progress class="brigand__health-bar" value="100" max="100"></progress>
           <div class="main__brigand-bar">100/100</div>
         </article >
@@ -27,7 +27,7 @@
 
 
       </footer>
-    `,document.querySelector(`.header__fight-home`).addEventListener(`click`,a),i.stop(),i.begin(),r.play(),2))}var s=new class{constructor(e){this.audio=new Audio(e),this.audio.volume=.5}play(){this.audio.play()}stop(){this.audio.pause()}}(`./assets/audio/btnClick.mp3`);function c(e){document.querySelector(`#app`).innerHTML=`
+    `,document.querySelector(`.header__fight-home`).addEventListener(`click`,a),i.play(),r.stop(),r.begin(),n.play(),2))}function s(e){document.querySelector(`#app`).innerHTML=`
     <div class="container">
       <header class="header">
         <h1 class="header__name">Name: &nbsp;&nbsp;<span>${e}<span></h1>
@@ -54,9 +54,27 @@
         </div>
       </main>
     </div>
-  `,localStorage.setItem(`fullName`,e),s.play(),document.querySelector(`.character__container`).addEventListener(`click`,t=>{let n=t.target.closest(`.character__hero-card`);n&&(l(e,n.id),s.play())})}function l(r,i){let a=`${i} ${r}`,s=`${i}`;document.querySelector(`#app`).innerHTML=`
+  `,localStorage.setItem(`fullName`,e),i.play(),document.querySelector(`.character__container`).addEventListener(`click`,t=>{let n=t.target.closest(`.character__hero-card`);n&&(l(e,n.id),i.play())})}async function c(e){let t=(await(await fetch(`./assets/json/characters.json`)).json()).map(t=>{if(t.hero===e)return t.description});document.querySelector(`#app`).innerHTML=`
+      <div class="container">
+        <header class="header">
+          <h1 class="header__name">Name: &nbsp;&nbsp;<span>${localStorage.getItem(`fullName`)}<span></h1>
+          <img class="header__fight-home" src="./assets/controls/home.svg" alt="Go home">
+        </header>
+        <main class="main" id="main">
+          <div class="current-character__container">
+            <article class="current-character__card" id="${e}">
+              <img class="current-character__img" src="./assets/${e}.png" alt="${e}">
+              <h3 class="current-character__name">${e}</h3>
+            </article>
+            <div class="current-character__description">
+              ${t}
+            </div>
+          </div>
+        </main>
+      </div>
+      `,i.play(),document.querySelector(`.header__fight-home`).addEventListener(`click`,a)}function l(n,r){let i=`${r} ${n}`,a=`${r}`;document.querySelector(`#app`).innerHTML=`
     <header class="header">
-      <h1 class="header__name">Name: &nbsp;&nbsp;<span>${i} ${r}<span></h1>
+      <h1 class="header__name">Name: &nbsp;&nbsp;<span>${r} ${n}<span></h1>
     </header>
     <main class="main main__base" id="main">
       
@@ -78,7 +96,7 @@
         <span>Explore the Darkest Dungeon</span>
       </div>
     </main>
-  `,document.querySelector(`.main__restart`).addEventListener(`click`,()=>{e(),t(document.querySelector(`.create__character-input`),document.querySelector(`.create__character-btn`)),u(document.querySelector(`.create__character-btn`))}),document.querySelector(`.main__sanitarium`).addEventListener(`click`,n),document.querySelector(`.main__tavern`).addEventListener(`click`,()=>c(r)),o(document.querySelector(`.main__start-fight`),r,i),localStorage.setItem(`fullName`,a),localStorage.setItem(`name`,r),localStorage.setItem(`character`,s)}function u(e){e.addEventListener(`click`,t=>{let n=document.querySelector(`.create__character-input`).value;n.trim()===``?e.classList.add(`create__character-btn-none`):(document.querySelector(`#app`).innerHTML=`
+  `,document.querySelector(`.main__restart`).addEventListener(`click`,()=>{e(),t(document.querySelector(`.create__character-input`),document.querySelector(`.create__character-btn`)),u(document.querySelector(`.create__character-btn`))}),document.querySelector(`.main__sanitarium`).addEventListener(`click`,e=>c(r)),document.querySelector(`.main__tavern`).addEventListener(`click`,()=>s(n)),o(document.querySelector(`.main__start-fight`),n,r),localStorage.setItem(`fullName`,i),localStorage.setItem(`name`,n),localStorage.setItem(`character`,a)}function u(e){e.addEventListener(`click`,t=>{let n=document.querySelector(`.create__character-input`).value;n.trim()===``?e.classList.add(`create__character-btn-none`):(document.querySelector(`#app`).innerHTML=`
       <div class="container">
         <header class="header">
           <h1 class="header__name">Name: &nbsp;&nbsp;<span>${n}<span></h1>
@@ -106,13 +124,13 @@
         </main>
       </div>
         
-      `,localStorage.setItem(`fullName`,n),s.play(),document.querySelector(`.character__container`).addEventListener(`click`,e=>{let t=e.target.closest(`.character__hero-card`);t&&(l(n,t.id),s.play(),i.play())}))})}var d=new class{constructor(e){this.audio=new Audio(e),this.audio.volume=.5}play(){this.audio.play()}stop(){this.audio.pause()}}(`./assets/audio/welcome.mp3`);function f(n,r){document.querySelector(`#app`).innerHTML=`
+      `,localStorage.setItem(`fullName`,n),i.play(),document.querySelector(`.character__container`).addEventListener(`click`,e=>{let t=e.target.closest(`.character__hero-card`);t&&(l(n,t.id),i.play(),r.play())}))})}var d=new class{constructor(e){this.audio=new Audio(e),this.audio.volume=.5}play(){this.audio.play()}stop(){this.audio.pause()}}(`./assets/audio/welcome.mp3`);function f(n,a){document.querySelector(`#app`).innerHTML=`
     <main class="main__welcome" id="main">
       <div class="welcome__window">
         <h2 class="welcome__title">Welcome home the Heir!</h2>
         <div class="welcome__last">
           <h3 class="welcome__last-name">Your last name: <span>${n}</span></h3>
-          <h3 class="welcome__last-character">Your last character: <span>${r}</span></h3>
+          <h3 class="welcome__last-character">Your last character: <span>${a}</span></h3>
         </div>
         <div class="welcome__field">
           <button class="welcome__btn welcome__btn-restart" id="restart__btn">Select a name</button>
@@ -120,7 +138,7 @@
         </div>
       </div>
     </main>
-  `,document.querySelector(`#restart__btn`).addEventListener(`click`,()=>{e(),t(document.querySelector(`.create__character-input`),document.querySelector(`.create__character-btn`)),u(document.querySelector(`.create__character-btn`)),s.play(),i.play()}),document.querySelector(`#continue__btn`).addEventListener(`click`,()=>{n!==null&&r!==null&&(l(n,r),o(document.querySelector(`.main__start-arrow`),localStorage.getItem(`name`),localStorage.getItem(`character`)),s.play(),d.play(),i.play())})}document.querySelector(`#app`).innerHTML=`
+  `,document.querySelector(`#restart__btn`).addEventListener(`click`,()=>{e(),t(document.querySelector(`.create__character-input`),document.querySelector(`.create__character-btn`)),u(document.querySelector(`.create__character-btn`)),i.play(),r.play()}),document.querySelector(`#continue__btn`).addEventListener(`click`,()=>{n!==null&&a!==null&&(l(n,a),o(document.querySelector(`.main__start-arrow`),localStorage.getItem(`name`),localStorage.getItem(`character`)),i.play(),d.play(),r.play())})}document.querySelector(`#app`).innerHTML=`
 <header class="header">
   <h1 class="header__title">Not fight club</h1>
 </header>
