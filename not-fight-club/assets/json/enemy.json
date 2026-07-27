@@ -4,7 +4,7 @@
     "img": "./assets/brigand.png"
   },
   {
-   "enemy": "prorok",
-    "img": "./assets/prorok.png"
+   "enemy": "bprorok",
+    "img": "./assets/bprorok.png"
   }
 ]
