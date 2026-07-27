@@ -1,0 +1,26 @@
+[
+  {
+   "hero": "Crusader",
+    "img": "./assets/Crusader.png",
+    "type": "character",
+    "description": "The Crusader - is a fearless leader: standing at the front, he steadfastly takes blows and inspires the team with his battle banners, relieving stress and healing his allies. He lashes out at his enemies with furious accusations of their sins, and if the rear ranks are hit, he can ram them with his sword."
+  },
+  {
+   "hero": "Jester",
+    "img": "./assets/Jester.png",
+    "type": "character",
+    "description": "The Jester supports his allies with lute melodies, increasing their speed, accuracy, and critical strike chance, while also relieving stress. He can also cut through the enemy's mid-ranks with his sickle, and when necessary, he can rush forward with a dagger strike or an eerie musical riff, foreshadowing the imminent death of anyone he chooses to unleash his grand finale on."
+  },
+  {
+   "hero": "Highwayman",
+    "img": "./assets/Highwayman.png",
+    "type": "character",
+    "description": "The Highwayman - is a versatile fighter, capable of attacking enemies from any position. In the back ranks, he primarily uses a pistol, firing at single targets or raining down weakening buckshot on crowds of enemies. He can also rush into close combat, slashing at enemies with his knife and countering blow for blow, and if necessary, he can retreat, sending his enemies a farewell salute with a sharp pull of the trigger."
+  },
+  {
+   "hero": "Bounty Hunter",
+    "img": "./assets/Bounty Hunter.png",
+    "type": "character",
+    "description": "The Bounty Hunter - standing at the front, The Bounty Hunter relentlessly hacks away with a heavy axe, especially sparing enemies under the effects of Mark or stun. If the situation gets tough, he manipulates the enemy line, stunning them with flashbangs, pelting them with barbed spikes, pulling them in with a hook, and knocking them back with an uppercut."
+  }
+]

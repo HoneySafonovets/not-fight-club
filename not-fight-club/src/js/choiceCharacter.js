@@ -4,6 +4,7 @@ import pushName from "./pushName";
 import resultsTable from "./resultsTable";
 import startFight from "./startFight";
 import selectNewCharacter from "./selectNewCharacter";
+import characterDescription from "./characterDescription";
 
 export default function choiceCharacter(value, name) {
   const fullName = `${name} ${value}`;
@@ -47,7 +48,7 @@ export default function choiceCharacter(value, name) {
     pushName(document.querySelector('.create__character-btn'));
   });
   // Results Table
-  document.querySelector('.main__sanitarium').addEventListener('click', resultsTable);
+  document.querySelector('.main__sanitarium').addEventListener('click', (event) => characterDescription(name));
   // Swipe hero
   document.querySelector('.main__tavern').addEventListener('click', () => selectNewCharacter(value));
   // Start fight
