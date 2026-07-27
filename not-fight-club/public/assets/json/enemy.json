@@ -1,0 +1,10 @@
+[
+  {
+   "enemy": "brigand",
+    "img": "./assets/brigand.png"
+  },
+  {
+   "enemy": "prorok",
+    "img": "./assets/prorok.png"
+  }
+]

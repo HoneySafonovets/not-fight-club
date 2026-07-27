@@ -1,0 +1,13 @@
+// Basic styles
+@import "./base/reset";
+@import "./base/fonts";
+@import "./base/vars";
+@import "./base/base";
+
+
+// Blocks
+@import "./blocks/welcome";
+@import "./blocks/header";
+@import "./blocks/modal-create-character";
+@import "./blocks/character";
+@import "./blocks/footer";

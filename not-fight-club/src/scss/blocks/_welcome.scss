@@ -1,0 +1,60 @@
+.welcome__window {
+  width: 600px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  border: 1px solid $grey-bg;
+  border-radius: 10px;
+  color: $base-color;
+  padding: 10px;
+}
+
+.welcome__last {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: $btn-color;
+  font-size: 22px;
+  gap: 20px;
+}
+
+.welcome__field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.welcome__title {
+  font-size: 32px;
+}
+
+.welcome__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid $grey-bg;
+  border-radius: 10px;
+  font-size: 22px;
+  min-width: 170px;
+}
+
+
+@media (hover: hover) {
+  .welcome__btn:hover {
+    cursor: pointer;
+    background-color: $btn-color;
+    color: $base-color;
+    transition: all 0.3s ease-in;
+  }
+  .welcome__btn:not(hover) {
+    background-color: $card-hero-back;
+    color: $base-color;
+    transition: all 0.3s ease-in;
+  }
+}

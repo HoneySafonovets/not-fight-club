@@ -1,0 +1,60 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header__name {
+  font-size: 24px;
+  font-family: $font-base;
+  font-weight: 700;
+
+  span {
+    font-size: 28px;
+  }
+}
+
+.header__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.header__nav-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.header__fight-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+}
+
+@media (hover: hover) {
+  .header__nav-img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all .3s ease-in;
+  }
+  .header__nav-img:not(hover) {
+    transform: scale(1);
+    transition: all .3s ease-in;
+  }
+
+  .header__fight-home:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all .3s ease-in;
+  }
+  .header__fight-home:not(hover) {
+    transform: scale(1);
+    transition: all .3s ease-in;
+  }
+}

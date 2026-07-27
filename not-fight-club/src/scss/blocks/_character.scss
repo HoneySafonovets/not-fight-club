@@ -1,0 +1,130 @@
+.character__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-family: $font-base;
+  font-weight: 700;
+}
+
+.character__name {
+  font-size: 32px;
+  font-family: $font-base;
+  font-weight: 700;
+}
+
+.character__class {
+  display: flex;
+  font-size: 32px;
+  font-family: $font-base;
+  font-weight: 700;
+}
+
+.character__hero-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  width: 310px;
+  max-height: 400px;
+  border: 1px solid ;
+  border-radius: 10px;
+  background-color: $card-hero-back;
+}
+
+.character__hero-img {
+  max-width: 210px;
+  max-height: 310px;
+}
+
+.character__hero-name {
+  font-size: 24px;
+  color: $base-color;
+  font-family: $font-base;
+  font-weight: 700;
+}
+
+.character__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+}
+
+.character__health-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $hp-bar-color;
+  border-radius: 10px;
+  font-family: $font-base;
+  font-size: 24px;
+  width: 300px;
+  height: 10px;
+  bottom: 50px;
+  right: 0px;
+}
+
+.brigand__health-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $hp-bar-color;
+  border-radius: 10px;
+  width: 300px;
+  height: 10px;
+  bottom: 50px;
+  right: 0px;
+}
+
+.current-character__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 300px;
+  font-family: $font-base;
+  font-weight: 700;
+}
+
+.current-character__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.current-character__img {
+  max-width: 350px;
+  max-height: 400px;
+}
+
+.current-character__name {
+  font-size: 26px;
+}
+
+.current-character__description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  text-align: justify;
+}
+
+@media (hover: hover) {
+  .character__hero-card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in;
+  }
+  .character__hero-card:not(hover) {
+    transform: scale(1);
+    transition: all 0.3s ease-in;
+  }
+}
